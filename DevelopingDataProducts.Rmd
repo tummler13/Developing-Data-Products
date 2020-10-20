@@ -1,0 +1,61 @@
+---
+title: "Maps using RMarkdown and Leaflet"
+author: "Ayush Mohapatra"
+date: "10/20/2020"
+output: html_document
+---
+
+##  Objective
+
+
+To host a webpage.
+
+Should contain a document and a map created with Leaflet.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Required Packages
+
+```{r echo=TRUE}
+library(leaflet)
+```
+
+## Places where I've studied 
+
+Includes data of all the schools and colleges I've attended.
+
+```{r}
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=20.3076634, lng=85.8124696,
+popup="I completed my high school from Loyola School, Bhubaneshwar ")
+my_map
+
+
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=20.24, lng=85.83,
+popup="I completed my middle school from St.Xaviers High School Bhubaneshwar")
+my_map
+
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=13.21, lng=74.47,
+popup="I completed my Bachelors in Engineering from Manipal Institute of Technology")
+my_map
+
+
+```
+
+## Project Review
+
+Packages Used: Knitr, Leaflet.
+
+
+Locations Provided: Manipal, Bhubaneshwar.
+
+
+
+
